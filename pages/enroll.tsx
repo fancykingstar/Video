@@ -2,6 +2,7 @@ import styled from "styled-components";
 import {NavBar} from "../components/NavBar/NavBar";
 import { Footer } from "../components/Footer/Footer";
 import {InputText} from "../components/InputText/InputText"
+import { FormInput } from "../components/FormInput/FormInput"
 import React from "react";
 
 const Index = () => (
@@ -14,6 +15,16 @@ const Index = () => (
 
 export default Index;
 
+const options = [
+    { key: "twitter", value: "Twitter" },
+    { key: "instagram", value: "Instagram" },
+    { key: "youtube", value: "Youtube" },
+    { key: "facebook", value: "Facebook" },
+    { key: "Twitch", value: "twitch" },
+    { key: "musically", value: "TikTok" },
+    { key: "other", value: "Other" },
+]
+
 const Body = () => (
     <BodyWrapper>
         <BodyContainer>
@@ -25,41 +36,23 @@ const Body = () => (
                     <FormDesc>
                         If you have fans and want to join Cameo as talent, you can enroll here and we'll be in touch.
                     </FormDesc>
-                    <FormRowContent>
-                        <RowLable>Your name</RowLable>
-                        <InputText type="text" placeholder="Michael Jordan" />
-
-                    </FormRowContent>
-                    <FormRowContent>
-                        <RowLable>Email</RowLable>
-                        <InputText type="email" placeholder="you@example.com" />
-                    </FormRowContent>
-                    <FormRowContent>
-                        <RowLable>Phone number (never shared)</RowLable>
-                        <InputText type="number" placeholder="555-555-5555" />
-                    </FormRowContent>
+                    <FormInput text="Your name" placeholder="Michael Jordan" />
+                    <FormInput text="Email" placeholder="you@example.com" />
+                    <FormInput text="Phone number (never shared)" placeholder="555-555-5555" />
                     <FormRowContent>
                         <RowLable>Where can we find you?</RowLable>
                         <InputWrapper>
-                            <Select type="number" defaultValue="twitter" placeholder="555-555-5555" >
-                                <option value="twitter">Twitter</option>
-                                <option value="instagram">Instagram</option>
-                                <option value="youtube">YouTube</option>
-                                <option value="facebook">Facebook</option>
-                                <option value="twitch">Twitch</option>
-                                <option value="musically">TikTok</option>
-                                <option value="other">Other</option>
+                            <Select type="Number" defaultValue="twitter" placeholder="twitter" >
+                                {
+                                    options.map((option, index) => {
+                                        return <option value={option.key} key={index}>{option.value}</option>
+                                    })
+                                }
                             </Select>
                         </InputWrapper>
                     </FormRowContent>
-                    <FormRowContent>
-                        <RowLable>Your handle</RowLable>
-                        <InputText type="text" placeholder="@jimmybuffet" />
-                    </FormRowContent>
-                    <FormRowContent>
-                        <RowLable>How many followers do you have?</RowLable>
-                        <InputText type="text" placeholder="400k" />
-                    </FormRowContent>
+                    <FormInput text="Your handle" placeholder="@jimmybuffet" />
+                    <FormInput text="How many followers do you have?" placeholder="400k" />
                     <FormRowContent>
                         <SubmitBtn>
                             Submit
