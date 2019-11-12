@@ -14,6 +14,33 @@ const Index = () => (
 
 export default Index;
 
+const rCards = [
+    {
+        price: "$25",
+        src: "tjlavin_bottom.png",
+        smallTitle: "MTV - The Challenge",
+        title: "Zach Nichols"
+    },
+    {
+        price: "$25",
+        src: "tjlavin_bottom.png",
+        smallTitle: "MTV - The Challenge",
+        title: "Zach Nichols"
+    },
+    {
+        price: "$25",
+        src: "tjlavin_bottom.png",
+        smallTitle: "MTV - The Challenge",
+        title: "Zach Nichols"
+    },
+    {
+        price: "$25",
+        src: "tjlavin_bottom.png",
+        smallTitle: "MTV - The Challenge",
+        title: "Zach Nichols"
+    }
+];
+
 const Body = () => (
     <BodyWrapper>
         <HeaderRow>
@@ -139,10 +166,11 @@ const Body = () => (
                         Also check out
                     </ResultTitle>
                     <ResultsGrid>
-                        <RelatedCard />
-                        <RelatedCard />
-                        <RelatedCard />
-                        <RelatedCard />
+                        {
+                            rCards.map((card, index) => {
+                                return <RelatedCard price={card.price} src={card.src} smallTitle={card.smallTitle} title={card.title} key={index} />
+                            })
+                        }
                     </ResultsGrid>
                 </ResultsContainer>
             </BodyRow>

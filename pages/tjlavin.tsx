@@ -17,6 +17,70 @@ const Index = () => (
 
 export default Index;
 
+const categories = [
+  "TV Hosts",
+  "Reality TV",
+  "Featured",
+  "Extreme Sports",
+  "MTV",
+  "The Challenge",
+  "BMX"
+];
+
+const rCards = [
+    {
+        price: "$25",
+        src: "tjlavin_bottom.png",
+        smallTitle: "MTV - The Challenge",
+        title: "Zach Nichols"
+    },
+    {
+        price: "$25",
+        src: "tjlavin_bottom.png",
+        smallTitle: "MTV - The Challenge",
+        title: "Zach Nichols"
+    },
+    {
+        price: "$25",
+        src: "tjlavin_bottom.png",
+        smallTitle: "MTV - The Challenge",
+        title: "Zach Nichols"
+    },
+    {
+        price: "$25",
+        src: "tjlavin_bottom.png",
+        smallTitle: "MTV - The Challenge",
+        title: "Zach Nichols"
+    }
+];
+
+const cardList = [
+    {
+        text: "A",
+        title: "By Cubby for Brian",
+        detail: "Details",
+        src: "tjlavin_bottom.png",
+    },
+    {
+        text: "A",
+        title: "By Cubby for Brian",
+        detail: "Details",
+        src: "tjlavin_bottom.png",
+    },
+    {
+        text: "A",
+        title: "By Cubby for Brian",
+        detail: "Details",
+        src: "tjlavin_bottom.png",
+    },
+    {
+        text: "A",
+        title: "By Cubby for Brian",
+        detail: "Details",
+        src: "tjlavin_bottom.png",
+    }
+];
+
 const Body = () => (
   <BodyWrapper>
     <BodyContainer>
@@ -76,27 +140,11 @@ const Body = () => (
                     </ReviewDesc>
                 </ReviewContainer>
                 <UserCategoryList>
-                    <UserCatItem>
-                        TV Hosts
-                    </UserCatItem>
-                    <UserCatItem>
-                        Reality TV
-                    </UserCatItem>
-                    <UserCatItem>
-                        Featured
-                    </UserCatItem>
-                    <UserCatItem>
-                        Extreme Sports
-                    </UserCatItem>
-                    <UserCatItem>
-                        MTV
-                    </UserCatItem>
-                    <UserCatItem>
-                        The Challenge
-                    </UserCatItem>
-                    <UserCatItem>
-                        BMX
-                    </UserCatItem>
+                    {
+                        categories.map((c, i) => {
+                            return <UserCatItem key={i}>{c}</UserCatItem>
+                        })
+                    }
                 </UserCategoryList>
               </TopSectionRightContent>
           </TopSectionRightContainer>
@@ -108,10 +156,11 @@ const Body = () => (
             Latest
           </ResultTitle>
           <ResultsGrid>
-              <CardListItem />
-              <CardListItem />
-              <CardListItem />
-              <CardListItem />
+            {
+              cardList.map((card, index) => {
+                return <CardListItem text={card.text} src={card.src} detail={card.detail} title={card.title} key={index} />
+              })
+            }
           </ResultsGrid>
         </ResultsContainer>
       </BodyRow>
@@ -121,10 +170,11 @@ const Body = () => (
             Related
           </ResultTitle>
           <ResultsGrid>
-              <RelatedCard />
-              <RelatedCard />
-              <RelatedCard />
-              <RelatedCard />
+            {
+              rCards.map((card, index) => {
+                return <RelatedCard price={card.price} src={card.src} smallTitle={card.smallTitle} title={card.title} key={index} />
+              })
+            }
           </ResultsGrid>
         </ResultsContainer>
       </BodyRow>
