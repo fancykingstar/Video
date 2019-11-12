@@ -20,7 +20,9 @@
     "jsx": "preserve"
   },
   "exclude": [
-    "node_modules"
+    "node_modules",
+    "build",
+    "scripts"
   ],
   "include": [
     "next-env.d.ts",
