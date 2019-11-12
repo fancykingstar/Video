@@ -79,12 +79,12 @@ const Body = () => (
   </BodyWrapper>
 );
 
-const BodyWrapper = styled.div`
+export const BodyWrapper = styled.div`
   margin-top: 0;
   padding-top: 70px;
 `;
 
-const BodyContainer = styled.div.attrs({ className: "container" })`
+export const BodyContainer = styled.div.attrs({ className: "container" })`
   padding-right: 15px;
   padding-left: 15px;
   margin-right: auto;
@@ -92,7 +92,7 @@ const BodyContainer = styled.div.attrs({ className: "container" })`
   font-size: 18px;
 `;
 
-const Title = styled.h3`
+export const Title = styled.h3`
   margin-top: 0;
   font-weight: 700;
   font-size: 25px;
@@ -103,7 +103,7 @@ const Title = styled.h3`
   white-space: nowrap;
 `;
 
-const CategoryTitle = styled.h3`
+export const CategoryTitle = styled.h3`
   margin-top: 0;
   font-weight: 700;
   font-size: 25px;
@@ -114,7 +114,7 @@ const CategoryTitle = styled.h3`
   }
 `;
 
-const BodyRow = styled.div`
+export const BodyRow = styled.div`
   margin-right: -15px;
   margin-left: -15px;
   display: flex;
@@ -128,14 +128,14 @@ const BodyRow = styled.div`
   }
 `;
 
-const SearchContainer = styled.div`
+export const SearchContainer = styled.div`
   width: 100%;
   padding-bottom: 16px;
   margin-top: 24px;
   position: relative;
 `;
 
-const SearchWrapper = styled.div`
+export const SearchWrapper = styled.div`
   margin-bottom: 15px;
   box-shadow: 0 1px 13px -4px hsla(0, 0%, 58%, 0.26);
   background-color: #fff;
@@ -143,7 +143,7 @@ const SearchWrapper = styled.div`
   position: relative;
 `;
 
-const Input = styled(TextField)`
+export const Input = styled(TextField)`
   width: 100%;
   input {
     &:focus {
@@ -157,19 +157,19 @@ const Input = styled(TextField)`
     padding: 26px 0 26px 56px;
   }
 `;
-const SearchIconContainer = styled.div`
+export const SearchIconContainer = styled.div`
   position: absolute;
   left: 15px;
   top: 20px;
   height: 40px;
 `;
 
-const SearchIconItem = styled(SearchIcon)`
+export const SearchIconItem = styled(SearchIcon)`
   height: 100%;
   color: #fa005c;
 `;
 
-const CategoryContainer = styled.div.attrs({
+export const CategoryContainer = styled.div.attrs({
   className: "w-1/6 sm:w-1/6 md:w-2/6 lg:w-1/6 xl:w-1/6"
 })`
   padding-bottom: 16px;
@@ -186,7 +186,7 @@ const CategoryContainer = styled.div.attrs({
     width: 100% !important;
   }
 `;
-const Select = styled.select`
+export const Select = styled.select`
   border: 0;
   border-radius: 0;
   appearance: none;
@@ -198,7 +198,7 @@ const Select = styled.select`
   line-height: 1.5;
   background: transparent;
 `;
-const ResultsContainer = styled.div.attrs({ className: "w-5/6" })`
+export const ResultsContainer = styled.div.attrs({ className: "w-5/6" })`
   margin-left: auto;
   margin-right: auto;
 
@@ -207,11 +207,11 @@ const ResultsContainer = styled.div.attrs({ className: "w-5/6" })`
   }
 `;
 
-const RecommendedWrapper = styled.div`
+export const RecommendedWrapper = styled.div`
   margin-bottom: 16px;
 `;
 
-const RecommendedContainer = styled.div.attrs({
+export const RecommendedContainer = styled.div.attrs({
   className: "w-1/3 ml-auto"
 })`
   div {
@@ -238,12 +238,12 @@ const RecommendedContainer = styled.div.attrs({
   }
 `;
 
-const ResultsGrid = styled.div`
+export const ResultsGrid = styled.div`
   display: flex;
   flex-wrap: wrap;
 `;
 
-const Sepatator = styled.div`
+export const Sepatator = styled.div`
   height: 1px;
   width: 90%;
   border-left: none;
@@ -251,14 +251,14 @@ const Sepatator = styled.div`
   margin: 16px 0 24px 5%;
 `;
 
-const CategoryItem = ({ name, amount }) => (
+export const CategoryItem = ({ name, amount }) => (
   <CategoryLink href="#">
     <CategoryLinkName>{name}</CategoryLinkName>
     <CategoryLinkAmount>({amount})</CategoryLinkAmount>
   </CategoryLink>
 );
 
-const CategoryLink = styled.a`
+export const CategoryLink = styled.a`
   width: 100%;
   padding: 9px 18px;
   margin: 0 12px 7px 0;
@@ -286,18 +286,18 @@ const CategoryLink = styled.a`
   }
 `;
 
-const CategoryLinkName = styled.span`
+export const CategoryLinkName = styled.span`
   color: #4d4d4d;
   overflow: hidden;
   text-overflow: ellipsis;
   margin-right: 3px;
 `;
 
-const CategoryLinkAmount = styled.span`
+export const CategoryLinkAmount = styled.span`
   color: #a1a1a1;
 `;
 
-const Image = ({ price, image, title, name, tags }) => (
+export const Image = ({ price, image, title, name, tags }) => (
   <GridImageWrapper>
     <GridImageContainer>
       <Price>{price}</Price>
@@ -320,7 +320,7 @@ const Image = ({ price, image, title, name, tags }) => (
   </GridImageWrapper>
 );
 
-const GridImageWrapper = styled.div.attrs({
+export const GridImageWrapper = styled.div.attrs({
   className: "lg:w-1/3 xl:w-1/4"
 })`
   margin-bottom: 20px;
@@ -330,9 +330,18 @@ const GridImageWrapper = styled.div.attrs({
   padding-left: 5px !important;
   min-width: 145px;
 
+  @media (min-width: 1280px) {
+    width: 25% !important;
+  }
+
+  @media (min-width: 1024px) {
+    width: 33.333333%;
+  }
+
   @media (max-width: 1024px) {
     width: 33.333333% !important;
   }
+
   @media (max-width: 500px) {
     width: 50% !important;
     min-height: auto;
@@ -341,7 +350,7 @@ const GridImageWrapper = styled.div.attrs({
   }
 `;
 
-const GridImageContainer = styled.div`
+export const GridImageContainer = styled.div`
   box-shadow: 4px 4px 17px hsla(0, 0%, 85.9%, 0.5);
   position: relative;
   background-size: cover;
@@ -359,7 +368,7 @@ const GridImageContainer = styled.div`
   }
 `;
 
-const Price = styled.span`
+export const Price = styled.span`
   color: #fff;
   font-weight: 600;
   font-size: 16px;
@@ -375,10 +384,11 @@ const Price = styled.span`
   }
 `;
 
-const ImageItem = styled.div`
+export const ImageItem = styled.div`
   background: #eee;
   height: 70%;
   width: 100%;
+  box-sizing: border-box;
   @media (max-width: 768px) {
     position: relative;
     padding: 60% 50%;
@@ -397,7 +407,7 @@ const ImageItem = styled.div`
   }
 `;
 
-const ImageContent = styled.div`
+export const ImageContent = styled.div`
   height: 30%;
   width: 100%;
   padding: 10px 12px;
@@ -408,7 +418,7 @@ const ImageContent = styled.div`
   }
 `;
 
-const SmallTitle = styled.a`
+export const SmallTitle = styled.a`
   color: #6c6c6c;
   font-size: 11px;
   display: block;
@@ -429,18 +439,18 @@ const SmallTitle = styled.a`
   }
 `;
 
-const FlatAppBar = styled(AppBar)`
+export const FlatAppBar = styled(AppBar)`
   box-shadow: none;
 `;
 
-const LogoContainer = styled.div`
+export const LogoContainer = styled.div`
   flex-grow: 1;
   display: flex;
   align-items: center;
   justify-content: flex-start;
 `;
 
-const Logo = styled.img.attrs({ src: "/logo-cropped.png" })`
+export const Logo = styled.img.attrs({ src: "/logo-cropped.png" })`
   max-height: 50px;
   margin: 0;
 `;
