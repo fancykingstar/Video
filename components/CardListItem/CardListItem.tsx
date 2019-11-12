@@ -35,11 +35,11 @@ export const CardListItem = ({text, title, detail, src}: IProps) => {
                         <img src={src} alt="image" />
                         <ImgBtnContainer>
                             <ImgBtnLeftContainer>
-                                <img src="/play.svg" alt="image" />
+                                <img src="play.svg" alt="image" />
                             </ImgBtnLeftContainer>
                             <ImgBtnRightContainer>
-                                <img src={'heart-white.svg'} alt='image' />
-                                <img src={'message-circle-white.svg'} alt='image' />
+                                <img src='heart-white.svg' alt='image' />
+                                <img src='message-circle-white.svg' alt='image' />
                             </ImgBtnRightContainer>
                         </ImgBtnContainer>
                     </CatImageItem>

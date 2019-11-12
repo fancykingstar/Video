@@ -9,11 +9,12 @@ export const GridImageWrapper = styled.div.attrs({
   padding-right: 5px !important;
   padding-left: 5px !important;
   min-width: 145px;
+  width: 25%;
+
   @media (max-width: 768px) {
     width: 50% !important;
   }
   @media (max-width: 320px) {
-    /* width: 150px; */
     height: 220px;
   }
 `;
@@ -57,6 +58,7 @@ export const ImageItem = styled.div`
     width: 100%;
     height: 100%;
     object-fit: cover;
+    max-height: 280px;
   }
 `;
 
