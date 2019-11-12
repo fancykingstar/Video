@@ -17,6 +17,14 @@ const Index = () => (
 
 export default Index;
 
+const options = [
+  { value: "", text: "Recommended" },
+  { value: "10", text: "Price High to Low" },
+  { value: "20", text: "Price Low to High" },
+  { value: "30", text: "Alphabet A-Z" },
+  { value: "", text: "Response Time (fastest to slowest)" },
+];
+
 const Body = () => (
   <BodyWrapper>
     <BodyContainer>
@@ -45,13 +53,11 @@ const Body = () => (
           <RecommendedWrapper>
             <RecommendedContainer>
               <Select>
-                <option selected value="">
-                  Recommended
-                </option>
-                <option value={10}>Price High to Low</option>
-                <option value={20}>Price Low to High</option>
-                <option value={30}>Alphabet A-Z</option>
-                <option value="">Response Time (fastest to slowest)</option>
+                {
+                  options.map((option, index) => {
+                    return <option key={index} value={option.value}>{option.text}</option>
+                  })
+                }
               </Select>
             </RecommendedContainer>
           </RecommendedWrapper>
