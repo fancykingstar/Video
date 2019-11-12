@@ -1,5 +1,5 @@
 import React from 'react';
-import { RightContentRow, ImageContainer, RowTextContent, TalentLink } from './Styled';
+import { RightContentRow, ImageContainer, RowTextContent } from './Styled';
 
 interface IProps {
     src: string;

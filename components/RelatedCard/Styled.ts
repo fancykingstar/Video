@@ -1,23 +1,5 @@
 import styled from 'styled-components'
 
-export const GridImageWrapper = styled.div.attrs({
-    className: "w-1/4"
-})`
-  margin-bottom: 20px;
-  min-height: 170px;
-  max-height: 350px;
-  padding-right: 5px !important;
-  padding-left: 5px !important;
-  min-width: 145px;
-  @media (max-width: 768px) {
-    width: 50% !important;
-  }
-  @media (max-width: 320px) {
-    /* width: 150px; */
-    height: 220px;
-  }
-`;
-
 export const GridImageContainer = styled.div`
   box-shadow: 4px 4px 17px hsla(0, 0%, 85.9%, 0.5);
   position: relative;
@@ -30,6 +12,25 @@ export const GridImageContainer = styled.div`
   height: 100%;
   &:hover {
     transform: translateY(-3px);
+  }
+`;
+
+export const GridImageWrapper = styled.div.attrs({
+    className: "w-1/4"
+})`
+  margin-bottom: 20px;
+  min-height: 170px;
+  max-height: 350px;
+  padding-right: 5px !important;
+  padding-left: 5px !important;
+  min-width: 145px;
+  width: 25%;
+
+  @media (max-width: 768px) {
+    width: 50% !important;
+  }
+  @media (max-width: 320px) {
+    height: 220px;
   }
 `;
 
@@ -57,6 +58,7 @@ export const ImageItem = styled.div`
     width: 100%;
     height: 100%;
     object-fit: cover;
+    max-height: 280px;
   }
 `;
 

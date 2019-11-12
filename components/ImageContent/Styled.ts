@@ -1,14 +1,5 @@
 import styled from 'styled-components';
 
-export const RightContentRow = styled.div`
-    align-items: center;
-    display: flex;
-    margin-left: 15px;
-    min-height: 54px;
-    padding-bottom: 30px;
-    color: #4d4d4d;
-`;
-
 export const ImageContainer = styled.div`
     height: 50px;
     left: -15px;
@@ -21,14 +12,15 @@ export const ImageContainer = styled.div`
         background: #f7f7f7;
 }`;
 
-export const RowTextContent = styled.div`
-
+export const RightContentRow = styled.div`
+    align-items: center;
+    display: flex;
+    margin-left: 15px;
+    min-height: 54px;
+    padding-bottom: 30px;
+    color: #4d4d4d;
 `;
 
-export const TalentLink = styled.a`
-    color: #337ab7;
-    text-decoration: none;
-    -webkit-font-smoothing: antialiased;
-    letter-spacing: .1px;
-    font-size: 18px;
+export const RowTextContent = styled.div`
+
 `;
