@@ -1,5 +1,20 @@
 import styled from 'styled-components'
 
+export const GridImageContainer = styled.div`
+  box-shadow: 4px 4px 17px hsla(0, 0%, 85.9%, 0.5);
+  position: relative;
+  background-size: cover;
+  background-color: #fff;
+  overflow: hidden;
+  transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  border-radius: 5px;
+  /* cursor: pointer; */
+  height: 100%;
+  &:hover {
+    transform: translateY(-3px);
+  }
+`;
+
 export const GridImageWrapper = styled.div.attrs({
     className: "w-1/4"
 })`
@@ -16,21 +31,6 @@ export const GridImageWrapper = styled.div.attrs({
   }
   @media (max-width: 320px) {
     height: 220px;
-  }
-`;
-
-export const GridImageContainer = styled.div`
-  box-shadow: 4px 4px 17px hsla(0, 0%, 85.9%, 0.5);
-  position: relative;
-  background-size: cover;
-  background-color: #fff;
-  overflow: hidden;
-  transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  border-radius: 5px;
-  /* cursor: pointer; */
-  height: 100%;
-  &:hover {
-    transform: translateY(-3px);
   }
 `;
 

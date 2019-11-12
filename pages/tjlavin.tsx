@@ -385,6 +385,7 @@ export const BodyRow = styled.div`
   min-height: 1px;
   padding-right: 15px;
   padding-left: 15px;
+  
   @media (min-width: 1200px) {
     margin-left: 8.333333%;
     margin-right: 8.333333%;
@@ -399,7 +400,7 @@ export const BodyRow = styled.div`
 export const ResultsContainer = styled.div.attrs({ className: "w-6/6" })`
   margin-left: auto;
   margin-right: auto;
-
+  box-sizing: inherit;
   @media (max-width: 1024px) {
     width: 100% !important;
   }

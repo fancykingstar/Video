@@ -7,7 +7,7 @@
     "dev": "next",
     "build": "next build",
     "start": "next start",
-    "storybook": "start-storybook -s ./public -c .storybook"
+    "storybook": "start-storybook -p 9001 -s ./public,./static -c .storybook"
   },
   "keywords": [],
   "author": "",

@@ -1,13 +1,31 @@
 import styled from 'styled-components'
 
+export const CatItemWrapper = styled.div.attrs({
+    className: "xl:w-1/3"
+
+})`
+  margin-bottom: 20px;
+  min-height: 270px;
+  max-height: 650px;
+  padding-right: 10px !important;
+  padding-left: 10px !important;
+  min-width: 145px;
+  width: 33.3333% !important;
+
+  @media (max-width: 768px) {
+    width: 100% !important;
+    margin: 20px 30px;
+  }
+`;
+
 export const ImgBtnContainer = styled.div`
-  position: absolute;
-  bottom: 20px;
-  left: 20px;
-  right: 20px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 `
 export const CatImageItem = styled.div`
   height: 70%;
@@ -22,10 +40,10 @@ export const CatImageItem = styled.div`
   }
 `;
 export const CatLeftTxt = styled.div`
-  font-weight: 700;
-  font-size: 24px;
-  padding-bottom: 2px;
-  text-transform: uppercase;
+    font-weight: 700;
+    font-size: 24px;
+    padding-bottom: 2px;
+    text-transform: uppercase;
 `
 export const CatItemContainer = styled.div`
   box-shadow: 0 2PX 32PX 0 RGBA(0,0,0,.15);
@@ -43,119 +61,85 @@ export const CatItemContainer = styled.div`
   }
 `
 export const CatItemDetailTxt = styled.div`
-  color: #999;
-  font-size: 14px;
-  font-weight: 500;
+    color: #999;
+    font-size: 14px;
+    font-weight: 500;
 `
 export const CatItemTitle = styled.div`
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  width: 200px;
-  font-size: 18px;
-  font-weight: 500;
-  line-height: 1.3;
-  @media (max-width: 1280px) {
-      width: 150px;
-    }
-  @media (max-width: 1024px) {
-      width: 100px;
-    }
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 200px;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.3;
+    @media (max-width: 1280px) {
+        width: 150px;
+      }
+    @media (max-width: 1024px) {
+        width: 100px;
+      }
 `
 export const CatItemVideoSection = styled.div`
     
 `
 export const CatItemLeftContent = styled.div`
-  border-color: rgb(213, 56, 255);
-  background-color: rgb(213, 56, 255);
-  backgroundc-clip: border-box;
-  background-image: none;
-  algign-items: center;
-  background-position: top;
-  border-radius: 50%;
-  display: flex;
-  height: 36px;
-  justify-content: center;
-  margin-right: 14px;
-  width: 36px;
+    border-color: rgb(213, 56, 255);
+    background-color: rgb(213, 56, 255);
+    backgroundc-clip: border-box;
+    background-image: none;
+    algign-items: center;
+    background-position: top;
+    border-radius: 50%;
+    display: flex;
+    height: 36px;
+    justify-content: center;
+    margin-right: 14px;
+    width: 36px;
 `
 export const CatItemRightContent = styled.div`
     
-`;
-export const CatItemTxtSection = styled.div`
-  display: flex;
-  padding: 10px 15px;
-  color: #212121;
-  border-color: #dddddd'
-  border-bottom: none;
-`;
-export const CatItemWrapper = styled.div.attrs({
-    className: "xl:w-1/3"
-})`
-  margin-bottom: 20px;
-  min-height: 270px;
-  max-height: 650px;
-  padding-right: 10px !important;
-  padding-left: 10px !important;
-  min-width: 145px;
-  width: 33.3333% !important;
-
-  @media (max-width: 768px) {
-    width: 100%;
-    margin: 20px 30px;
-  }
-`;
-export const ImgBtnRightContainer = styled.div`
-  display: flex;
-  align-items: center;
-  img {
-    width: 24px;
-    height: 24px;
-    background: transparent;
-    margin-bottom: 0px;
-    margin-left: 20px;
-    transform: scale(1);
-    transition: transform .1s;
-    &:hover {
-      transform: scale(1.3);
-      transition: transform .1s;
-    }
-  }
 `
 export const ImgBtnLeftContainer = styled.div`
-  display: flex;
-  align-items: center;
-  img {
-    width: 60px;
-    height: 60px;
-    background: transparent;
-    margin-bottom: 0px;
-    transform: scale(1);
-    transition: transform .1s;
-    
-    &:hover {
-        transform: scale(1.3);
+    display: flex;
+    align-items: center;
+    img {
+        width: 60px;
+        height: 60px;
+        background: transparent;
+        margin-bottom: 0px;
+        transform: scale(1);
         transition: transform .1s;
+        
+        &:hover {
+            transform: scale(1.3);
+            transition: transform .1s;
+        }
     }
-  }
 `
 
-export const GridImageWrapper = styled.div.attrs({
-    className: "w-1/4"
-})`
-  margin-bottom: 20px;
-  min-height: 170px;
-  max-height: 350px;
-  padding-right: 5px !important;
-  padding-left: 5px !important;
-  min-width: 145px;
+export const ImgBtnRightContainer = styled.div`
+    display: flex;
+    align-items: center;
+    img {
+        width: 24px;
+        height: 24px;
+        background: transparent;
+        margin-bottom: 0px;
+        margin-left: 20px;
+        transform: scale(1);
+        transition: transform .1s;
+        &:hover {
+            transform: scale(1.3);
+            transition: transform .1s;
+        }
+    }
+`
 
-  @media (max-width: 768px) {
-    width: 50% !important;
-  }
-
-  @media (max-width: 320px) {
-    /* width: 150px; */
-    height: 220px;
-  }
-`;
+export const CatItemTxtSection = styled.div`
+    display: flex;
+    padding: 10px 15px;
+    color: #212121;
+    border-color: #dddddd'
+    border-bottom: none;
+`

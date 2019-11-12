@@ -1,39 +1,56 @@
 import React from 'react';
+import styled from 'styled-components'
 import { storiesOf  } from '@storybook/react';
-import { CardListItem } from '../../../components/CardListItem/CardListItem.tsx';
+import { 
+  CardListItem,
+} from '../../../components/CardListItem/CardListItem';
+import { ResultsGrid, BodyRow, ResultsContainer, BodyContainer, BodyWrapper } from '../../../pages/tjlavin';
 
-const card =
-    {
-        text: "A",
-        title: "By Cubby for Brian",
-        detail: "Details",
-        src: "tjlavin_bottom.png",
-    };
+const mockup = [{
+    text: "A",
+    title: "By Cubby for Brian",
+    detail: "Details",
+    src: "tjlavin_bottom.png",
+},{
+    text: "A",
+    title: "By Cubby for Brian",
+    detail: "Details",
+    src: "tjlavin_bottom.png",
+}]
 
-storiesOf('Pages|Tjlavin/CardListItem', module)
+
+
+
+storiesOf('Pages|tjlavin/CardListItem', module)
   // If you want to set the option for all stories in of this kind
   .addParameters({ options: { panelPosition: 'bottom' } })
   .add(
-    'CardListItem',
+    'Item',
     () => {
       return (
-        <div>
-          <label> Default CardListItem </label><br /><br />
-          <CardListItem text={card.text} src={card.src} detail={card.detail} title={card.title} />
-        </div>
+        <>
+          <CardListItem text={mockup[0].text} title={mockup[0].title} detail={mockup[0].detail} src={mockup[0].src} />
+        </>
       )
     },
     // If you want to set the options for a specific story
-    { options: { panelPosition: 'right' } })
+    { options: { panelPosition: 'right' } }
+  )
   .add(
-    'Changed CardListItem',
+    'List',
     () => {
       return (
-        <div>
-          <label> You can change text, image, detail and title whatever you want </label><br /><br />
-          <CardListItem text="B" src="tjlavin_top.png" detail="DetailText" title="Title"/>
-        </div>
+        <>
+          <ResultsGrid>
+            {
+              mockup.map((m, i) => {
+                return <CardListItem text={m.text} title={m.title} detail={m.detail} src={m.src} key={i} />              
+              })
+            }
+          </ResultsGrid>
+        </>
       )
     },
     // If you want to set the options for a specific story
-    { options: { panelPosition: 'right' } })
+    { options: { panelPosition: 'right' } }
+  )
