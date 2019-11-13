@@ -26,6 +26,10 @@ export const DownloadButton = styled.a`
     @media (max-width: 767px) {
         display: none;
     }
+
+    &:hover, &:focus {
+        color: black;
+    }
 `;
 
 export const DownloadContainer = styled.div`
@@ -33,8 +37,15 @@ export const DownloadContainer = styled.div`
 `;
 
 export const DownloadImage = styled.img.attrs({ width: 15, height: 15 })`
+    $:hover {
+        color: black;
+    }
 `;
 
 export const DownloadText = styled.span`
     margin-left: 8px;
+
+    $:hover {
+        color: black;
+    }
 `;
