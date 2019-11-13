@@ -44,6 +44,70 @@ const rCards = [
 
 export default Index;
 
+const categories = [
+  "TV Hosts",
+  "Reality TV",
+  "Featured",
+  "Extreme Sports",
+  "MTV",
+  "The Challenge",
+  "BMX",
+];
+
+const rCards = [
+    {
+        price: "$25",
+        src: "tjlavin_bottom.png",
+        smallTitle: "MTV - The Challenge",
+        title: "Zach Nichols"
+    },
+    {
+        price: "$25",
+        src: "tjlavin_bottom.png",
+        smallTitle: "MTV - The Challenge",
+        title: "Zach Nichols"
+    },
+    {
+        price: "$25",
+        src: "tjlavin_bottom.png",
+        smallTitle: "MTV - The Challenge",
+        title: "Zach Nichols"
+    },
+    {
+        price: "$25",
+        src: "tjlavin_bottom.png",
+        smallTitle: "MTV - The Challenge",
+        title: "Zach Nichols"
+    }
+];
+
+const cardList = [
+    {
+        text: "A",
+        title: "By Cubby for Brian",
+        detail: "Details",
+        src: "tjlavin_bottom.png",
+    },
+    {
+        text: "A",
+        title: "By Cubby for Brian",
+        detail: "Details",
+        src: "tjlavin_bottom.png",
+    },
+    {
+        text: "A",
+        title: "By Cubby for Brian",
+        detail: "Details",
+        src: "tjlavin_bottom.png",
+    },
+    {
+        text: "A",
+        title: "By Cubby for Brian",
+        detail: "Details",
+        src: "tjlavin_bottom.png",
+    }
+];
+
 const Body = () => (
   <BodyWrapper>
     <BodyContainer>
@@ -103,27 +167,11 @@ const Body = () => (
                     </ReviewDesc>
                 </ReviewContainer>
                 <UserCategoryList>
-                    <UserCatItem>
-                        TV Hosts
-                    </UserCatItem>
-                    <UserCatItem>
-                        Reality TV
-                    </UserCatItem>
-                    <UserCatItem>
-                        Featured
-                    </UserCatItem>
-                    <UserCatItem>
-                        Extreme Sports
-                    </UserCatItem>
-                    <UserCatItem>
-                        MTV
-                    </UserCatItem>
-                    <UserCatItem>
-                        The Challenge
-                    </UserCatItem>
-                    <UserCatItem>
-                        BMX
-                    </UserCatItem>
+                    {
+                        categories.map((c, i) => {
+                            return <UserCatItem key={i}>{c}</UserCatItem>
+                        })
+                    }
                 </UserCategoryList>
               </TopSectionRightContent>
           </TopSectionRightContainer>
@@ -135,10 +183,11 @@ const Body = () => (
             Latest
           </ResultTitle>
           <ResultsGrid>
-              <CardListItem />
-              <CardListItem />
-              <CardListItem />
-              <CardListItem />
+            {
+              cardList.map((card, index) => {
+                return <CardListItem text={card.text} src={card.src} detail={card.detail} title={card.title} key={index} />
+              })
+            }
           </ResultsGrid>
         </ResultsContainer>
       </BodyRow>
@@ -159,13 +208,13 @@ const Body = () => (
     </BodyContainer>
   </BodyWrapper>
 );
-const ResultTitle = styled.div`
+export const ResultTitle = styled.div`
     font-size: 25px;
     font-weight: 700;
     margin-top: 24px;
     margin-bottom: 12px;
 `
-const UserCatItem = styled.a`
+export const UserCatItem = styled.a`
     padding: 9px 18px;
     margin: 0 12px 7px 0;
     border-radius: 30px;
@@ -178,66 +227,66 @@ const UserCatItem = styled.a`
       background-color: #ececec;
     }
 `
-const UserCategoryList = styled.div`
+export const UserCategoryList = styled.div`
     display: flex;
     flex-wrap: wrap;
     margin-top: 24px;
 `
-const AllReviews = styled.a`
+export const AllReviews = styled.a`
     cursor: pointer;
     color: #337ab7;
     text-decoration: none;
     font-size: 18px;
    
 `
-const ReviewCount = styled.div`
+export const ReviewCount = styled.div`
     color: #4d4d4d;
     font-size: 16px;
     font-weight: 700;
     margin: 8px 0px;
 `
-const ReviewSection = styled.div`
+export const ReviewSection = styled.div`
     color: #ffc200;
     
 `
-const ReviewTitle = styled.div`
+export const ReviewTitle = styled.div`
     font-weight: 700;
     font-size: 18px;
     color: #4d4d4d;
 `
-const ReviewDesc = styled.div`
+export const ReviewDesc = styled.div`
     width: 66.6666%;
     max-width: 420px;
     @media (max-width: 768px) {
         width: 100%;
     }
 `
-const ReviewStar = styled.div`
+export const ReviewStar = styled.div`
     width: 33.3333%;
     margin-bottom: 20px;
     @media (max-width: 768px) {
         width: 100%;
     }
 `
-const ReviewContainer = styled.div`
+export const ReviewContainer = styled.div`
     display: flex;
     flex-wrap: wrap;
     align-items: center;
 `
-const RespondDesc = styled.div`
+export const RespondDesc = styled.div`
     margin-bottom: 20px;
     svg {
         color: gold;
     }
 `
-const DescTxt = styled.span`
+export const DescTxt = styled.span`
     padding-left: 10px;
     font-size: 14px;
     letter-spacing: .5px;
     font-weight: 600;
     text-transform: uppercase;
 `
-const FollowBtn = styled.a`
+export const FollowBtn = styled.a`
     color: #131631;
     background-color: transparent;
     padding: 4px 24px;
@@ -257,7 +306,7 @@ const FollowBtn = styled.a`
       right: 0px;
    }
 `
-const ButtonContainer = styled.a`
+export const ButtonContainer = styled.a`
     color: #ffffff;
     cursor: pointer;
     background-color: #fa005c;
@@ -278,19 +327,19 @@ const ButtonContainer = styled.a`
       margin-right: 0px;
    }
 `
-const TopSectionButtonContainer = styled.div`
+export const TopSectionButtonContainer = styled.div`
   display: flex;
   font-size: 18px;
   margin-top: 24px;
 `;
 
-const TopSectionTxt = styled.div`
+export const TopSectionTxt = styled.div`
   color: #4d4d4d;
   font-size: 18px;
   line-height: 1.5;
 `;
 
-const TopSectionSubTitle = styled.div`
+export const TopSectionSubTitle = styled.div`
   color: #4d4d4d;
   font-weight: 600;
   font-size: 22px;
@@ -298,7 +347,7 @@ const TopSectionSubTitle = styled.div`
   margin-bottom: 15px;
 `;
 
-const TopSectionTitle = styled.div`
+export const TopSectionTitle = styled.div`
   color: #4d4d4d;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -306,7 +355,7 @@ const TopSectionTitle = styled.div`
   font-size: 36px;
 `;
 
-const TopSectionRightContent =  styled.div`
+export const TopSectionRightContent =  styled.div`
   padding-left: 30px;
   @media (max-width: 768px) {
     padding-left: 15px;
@@ -314,7 +363,7 @@ const TopSectionRightContent =  styled.div`
   }
 `;
 
-const TopSectionContainer = styled.div`
+export const TopSectionContainer = styled.div`
   display: flex;
   flex-direction: row;
   margin-top: 24px;
@@ -326,12 +375,12 @@ const TopSectionContainer = styled.div`
   }
 `;
 
-const BodyWrapper = styled.div`
+export const BodyWrapper = styled.div`
   margin-top: 0;
   padding-top: 70px;
 `;
 
-const BodyContainer = styled.div.attrs({ className: "container" })`
+export const BodyContainer = styled.div.attrs({ className: "container" })`
   padding-right: 15px;
   padding-left: 15px;
   margin-right: auto;
@@ -345,7 +394,7 @@ const BodyContainer = styled.div.attrs({ className: "container" })`
   }
 `;
 
-const Title = styled.h3`
+export const Title = styled.h3`
   color: #4d4d4d;
   margin: 0;
   word-wrap: break-word;
@@ -356,13 +405,14 @@ const Title = styled.h3`
   font-weight: 700;
 `;
 
-const BodyRow = styled.div`
+export const BodyRow = styled.div`
   margin-right: -15px;
   margin-left: -15px;
   display: flex;
   min-height: 1px;
   padding-right: 15px;
   padding-left: 15px;
+  
   @media (min-width: 1200px) {
     margin-left: 8.333333%;
     margin-right: 8.333333%;
@@ -374,10 +424,10 @@ const BodyRow = styled.div`
   }
 `;
 
-const ResultsContainer = styled.div.attrs({ className: "w-6/6" })`
+export const ResultsContainer = styled.div.attrs({ className: "w-6/6" })`
   margin-left: auto;
   margin-right: auto;
-
+  box-sizing: inherit;
   @media (max-width: 1024px) {
     width: 100% !important;
   }
@@ -387,12 +437,12 @@ const ResultsContainer = styled.div.attrs({ className: "w-6/6" })`
   }
 `;
 
-const ResultsGrid = styled.div`
+export const ResultsGrid = styled.div`
   display: flex;
   flex-wrap: wrap;
 `;
 
-const TopSectionLeftContainer = styled.div`
+export const TopSectionLeftContainer = styled.div`
   width: 33.333333%;
   max-width: 280px;
   img {
@@ -409,10 +459,9 @@ const TopSectionLeftContainer = styled.div`
   }
 `;
 
-const TopSectionRightContainer =  styled.div`
+export const TopSectionRightContainer =  styled.div`
   width: 66.666666%;
   @media (max-width: 768px) {
     width: 100%;
-    
   }
 `;

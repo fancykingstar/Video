@@ -1,5 +1,23 @@
 import styled from 'styled-components'
 
+export const CatItemWrapper = styled.div.attrs({
+    className: "xl:w-1/3"
+
+})`
+  margin-bottom: 20px;
+  min-height: 270px;
+  max-height: 650px;
+  padding-right: 10px !important;
+  padding-left: 10px !important;
+  min-width: 145px;
+  width: 33.3333% !important;
+
+  @media (max-width: 768px) {
+    width: 100% !important;
+    margin: 20px 30px;
+  }
+`;
+
 export const ImgBtnContainer = styled.div`
     position: absolute;
     bottom: 20px;
@@ -82,47 +100,6 @@ export const CatItemLeftContent = styled.div`
 export const CatItemRightContent = styled.div`
     
 `
-export const CatItemTxtSection = styled.div`
-    display: flex;
-    padding: 10px 15px;
-    color: #212121;
-    border-color: #dddddd'
-    border-bottom: none;
-`
-export const CatItemWrapper = styled.div.attrs({
-    className: "xl:w-1/3"
-
-})`
-  margin-bottom: 20px;
-  min-height: 270px;
-  max-height: 650px;
-  padding-right: 10px !important;
-  padding-left: 10px !important;
-  min-width: 145px;
-  width: 33.3333% !important;
-
-  @media (max-width: 768px) {
-    width: 100% !important;
-    margin: 20px 30px;
-  }
-`;
-export const ImgBtnRightContainer = styled.div`
-    display: flex;
-    align-items: center;
-    img {
-        width: 24px;
-        height: 24px;
-        background: transparent;
-        margin-bottom: 0px;
-        margin-left: 20px;
-        transform: scale(1);
-        transition: transform .1s;
-        &:hover {
-            transform: scale(1.3);
-            transition: transform .1s;
-        }
-    }
-`
 export const ImgBtnLeftContainer = styled.div`
     display: flex;
     align-items: center;
@@ -141,22 +118,28 @@ export const ImgBtnLeftContainer = styled.div`
     }
 `
 
-export const GridImageWrapper = styled.div.attrs({
-    className: "w-1/4"
-})`
-  margin-bottom: 20px;
-  min-height: 170px;
-  max-height: 350px;
-  padding-right: 5px !important;
-  padding-left: 5px !important;
-  min-width: 145px;
+export const ImgBtnRightContainer = styled.div`
+    display: flex;
+    align-items: center;
+    img {
+        width: 24px;
+        height: 24px;
+        background: transparent;
+        margin-bottom: 0px;
+        margin-left: 20px;
+        transform: scale(1);
+        transition: transform .1s;
+        &:hover {
+            transform: scale(1.3);
+            transition: transform .1s;
+        }
+    }
+`
 
-  @media (max-width: 768px) {
-    width: 50% !important;
-  }
-
-  @media (max-width: 320px) {
-    /* width: 150px; */
-    height: 220px;
-  }
-`;
+export const CatItemTxtSection = styled.div`
+    display: flex;
+    padding: 10px 15px;
+    color: #212121;
+    border-color: #dddddd'
+    border-bottom: none;
+`
