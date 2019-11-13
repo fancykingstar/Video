@@ -1,6 +1,24 @@
 import { addParameters, configure } from '@storybook/react';
 import { addDecorator } from '@storybook/react';
 
+import { createGlobalStyle } from "styled-components";
+const GlobalStyles = createGlobalStyle`
+    @font-face{
+        font-family:spinnler;font-weight:500;
+        src:url(https://d3el26csp1xekx.cloudfront.net/static/assets/aauxnextcond-medium-custom.woff2) 
+        format("woff2"),url(://dhttps3el26csp1xekx.cloudfront.net/static/assets/aauxnextcond-medium-custom.woff) 
+        format("woff"),url(https://d3el26csp1xekx.cloudfront.net/static/assets/aauxnextcond-medium-custom.ttf) 
+        format("truetype"),url(https://d3el26csp1xekx.cloudfront.net/static/assets/aauxnextcond-medium-custom.otf) 
+        format("opentype")}
+      @font-face{
+        font-family:fresh;font-weight:500;
+        src:url(/font/Rushink-Demo.otf) format("opentype"),
+        url(/font/Rushink-Demo.ttf) format("truetype")}
+    body {
+        font-family: spinnler, sans-serif, fresh;
+    }
+`
+
 // Option defaults:
 addParameters({
   options: {
@@ -71,5 +89,16 @@ addParameters({
     storySort: undefined,
   },
 });
+
+function withGlobalStyles(storyFn) {
+  return (
+    <React.Fragment>
+      <GlobalStyles />
+      {storyFn()}
+    </React.Fragment>
+  );
+}
+
+addDecorator(withGlobalStyles);
 
 configure(require.context('../__stories__', true, /\.stories\.tsx$/), module);
