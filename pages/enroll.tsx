@@ -83,6 +83,10 @@ const SubmitBtn = styled.div`
     cursor: pointer;
     line-height: 1.5;
     border-radius: 3px;
+
+    &:hover {
+        background-color: #7b002d !important;
+    }
 `
 const InputWrapper = styled.div`
     width: 100%;
