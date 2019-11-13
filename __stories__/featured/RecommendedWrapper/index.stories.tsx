@@ -1,5 +1,6 @@
 import React from 'react';
 import { storiesOf  } from '@storybook/react';
+import styled from 'styled-components';
 import { RecommendedWrapper, RecommendedContainer, Select } from '../../../pages/featured.tsx';
 
 storiesOf('Pages|Featured/RecommendedWrapper', module)
@@ -9,21 +10,21 @@ storiesOf('Pages|Featured/RecommendedWrapper', module)
     'Recommened Select Box',
     () => {
       return (
-        <div style={{ fontFamily: 'spinnler, sans-serif, fresh'}}>
+        <div style={{ fontFamily: 'spinnler, sans-serif, fresh', maxWidth: "300px"}} >
           <label> recommended select box </label><br />
-          <RecommendedWrapper>
-            <RecommendedContainer>
-              <Select>
-                <option selected value="">
-                  Recommended
-                </option>
-                <option value={10}>Price High to Low</option>
-                <option value={20}>Price Low to High</option>
-                <option value={30}>Alphabet A-Z</option>
-                <option value="">Response Time (fastest to slowest)</option>
-              </Select>
-            </RecommendedContainer>
-          </RecommendedWrapper>
+            <RecommendedWrapper>
+              <RecommendedContainer>
+                <Select>
+                  <option selected value="">
+                    Recommended
+                  </option>
+                  <option value={10}>Price High to Low</option>
+                  <option value={20}>Price Low to High</option>
+                  <option value={30}>Alphabet A-Z</option>
+                  <option value="">Response Time (fastest to slowest)</option>
+                </Select>
+              </RecommendedContainer>
+            </RecommendedWrapper>
         </div>
       )
     },

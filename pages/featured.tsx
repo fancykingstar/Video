@@ -264,6 +264,7 @@ export const CategoryLink = styled.a`
   margin: 0 12px 7px 0;
   display: inline-block;
   transition: all 0.2s;
+  text-decoration: none;
 
   &:nth-of-type(1) {
     background-color: #fa005c;

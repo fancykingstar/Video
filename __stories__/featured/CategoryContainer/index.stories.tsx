@@ -1,5 +1,6 @@
 import React from 'react';
 import { storiesOf  } from '@storybook/react';
+import styled from 'styled-components';
 import { CategoryItem, CategoryContainer, CategoryTitle, Sepatator } from '../../../pages/featured.tsx';
 
 const categories = [
@@ -32,19 +33,29 @@ storiesOf('Pages|Featured/CategoryContainer', module)
     	return (
     		<div style={{ fontFamily: 'spinnler, sans-serif, fresh'}}>
     			<label> category container</label><br />
-    			<CategoryContainer>
-            <CategoryTitle>Categories</CategoryTitle>
-            {categories.map((category, i) => {
-              const { name, amount } = category;
-              if (i === 8) {
-                return <Sepatator key={i} />;
-              }
-              return <CategoryItem key={i} name={name} amount={amount} />;
-            })}
-          </CategoryContainer>
+          <Left>
+      			<CategoryContainer>
+                <CategoryTitle>Categories</CategoryTitle>
+                {categories.map((category, i) => {
+                  const { name, amount } = category;
+                  if (i === 8) {
+                    return <Sepatator key={i} />;
+                  }
+                  return <CategoryItem key={i} name={name} amount={amount} style={{ maxWidth: '200px' }} />;
+                })}
+            </CategoryContainer>
+          </Left>
     		</div>
     	)
     },
     // If you want to set the options for a specific story
     { options: { panelPosition: 'right' } }
   )
+
+const Left = styled.div`
+  width: 16%;
+
+  @media (max-width: 1024px) {
+    width: 100%
+  }
+`
