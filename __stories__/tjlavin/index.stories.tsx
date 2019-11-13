@@ -604,6 +604,7 @@ const CatImageItem = styled.div`
   img {
     border-radius: 24px;
     border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
     width: 100%;
     height: 100%;
     object-fit: cover;

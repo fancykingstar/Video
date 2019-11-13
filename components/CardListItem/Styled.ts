@@ -34,8 +34,10 @@ export const CatImageItem = styled.div`
   img {
     border-radius: 24px;
     border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
     width: 100%;
     height: 100%;
+    max-height: 588px;
     object-fit: cover;
   }
 `;
