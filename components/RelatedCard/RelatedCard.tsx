@@ -1,17 +1,24 @@
 import React from 'react'
 import { GridImageWrapper, GridImageContainer,  Price, ImageItem, ImageContent, SmallTitle, Title} from './Styled'
 
-export const RelatedCard = () => {
+interface IProps {
+    price: string;
+    src: string;
+    smallTitle: string;
+    title: string;
+}
+
+export const RelatedCard = ({price, src, smallTitle, title}: IProps) => {
     return (
         <GridImageWrapper>
             <GridImageContainer>
-                <Price>$25</Price>
+                <Price>{price}</Price>
                 <ImageItem>
-                    <img src={'/tjlavin_bottom.png'} alt="image" />
+                    <img src={src} alt="image" />
                 </ImageItem>
                 <ImageContent>
-                    <SmallTitle>{'MTV - The Challenge'}</SmallTitle>
-                    <Title>{'Zach Nichols'}</Title>
+                    <SmallTitle>{smallTitle}</SmallTitle>
+                    <Title>{title}</Title>
                 </ImageContent>
             </GridImageContainer>
         </GridImageWrapper>

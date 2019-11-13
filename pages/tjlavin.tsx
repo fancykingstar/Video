@@ -15,6 +15,33 @@ const Index = () => (
   </>
 );
 
+const rCards = [
+    {
+        price: "$25",
+        src: "tjlavin_bottom.png",
+        smallTitle: "MTV - The Challenge",
+        title: "Zach Nichols"
+    },
+    {
+        price: "$25",
+        src: "tjlavin_bottom.png",
+        smallTitle: "MTV - The Challenge",
+        title: "Zach Nichols"
+    },
+    {
+        price: "$25",
+        src: "tjlavin_bottom.png",
+        smallTitle: "MTV - The Challenge",
+        title: "Zach Nichols"
+    },
+    {
+        price: "$25",
+        src: "tjlavin_bottom.png",
+        smallTitle: "MTV - The Challenge",
+        title: "Zach Nichols"
+    }
+];
+
 export default Index;
 
 const Body = () => (
@@ -121,10 +148,11 @@ const Body = () => (
             Related
           </ResultTitle>
           <ResultsGrid>
-              <RelatedCard />
-              <RelatedCard />
-              <RelatedCard />
-              <RelatedCard />
+            {
+              rCards.map((card, index) => {
+                return <RelatedCard price={card.price} src={card.src} smallTitle={card.smallTitle} title={card.title} key={index} />
+              })
+            }
           </ResultsGrid>
         </ResultsContainer>
       </BodyRow>
