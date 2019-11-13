@@ -9,7 +9,7 @@ storiesOf('Pages|Featured/SearchBar/Input', module)
     'Default Input',
     () => {
     	return (
-    		<div>
+    		<div style={{ fontFamily: 'spinnler, sans-serif, fresh'}}>
     			<label>Default Input PlaceHolder</label><br /><br />
           <Input placeholder="" />
     		</div>
@@ -21,7 +21,7 @@ storiesOf('Pages|Featured/SearchBar/Input', module)
     'Input with PlaceHolder',
     () => {
       return (
-        <div>
+        <div style={{ fontFamily: 'spinnler, sans-serif, fresh'}}>
           <label>You can change PlaceHolder</label><br /><br />
           <Input placeholder="Try 'Brett Favre' or 'Real Housewives" />
         </div>

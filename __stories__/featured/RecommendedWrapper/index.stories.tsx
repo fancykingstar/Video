@@ -9,7 +9,7 @@ storiesOf('Pages|Featured/RecommendedWrapper', module)
     'Recommened Select Box',
     () => {
       return (
-        <div>
+        <div style={{ fontFamily: 'spinnler, sans-serif, fresh'}}>
           <label> recommended select box </label><br />
           <RecommendedWrapper>
             <RecommendedContainer>

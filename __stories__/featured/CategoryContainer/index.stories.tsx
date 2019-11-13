@@ -30,7 +30,7 @@ storiesOf('Pages|Featured/CategoryContainer', module)
     'CategoryContainer',
     () => {
     	return (
-    		<div>
+    		<div style={{ fontFamily: 'spinnler, sans-serif, fresh'}}>
     			<label> category container</label><br />
     			<CategoryContainer>
             <CategoryTitle>Categories</CategoryTitle>

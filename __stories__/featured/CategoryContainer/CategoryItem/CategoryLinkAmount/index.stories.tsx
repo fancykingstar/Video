@@ -9,7 +9,7 @@ storiesOf('Pages|Featured/CategoryContainer/CategoryItem/CategoryLinkAmount', mo
     'CategoryLinkAmount',
     () => {
     	return (
-    		<div>
+    		<div style={{ fontFamily: 'spinnler, sans-serif, fresh'}}>
     			<label> you can change category link amount</label><br />
     			<CategoryLinkAmount>20</CategoryLinkAmount>
     		</div>

@@ -9,7 +9,7 @@ storiesOf('Pages|Featured/CategoryContainer/CategoryItem/CategoryLinkName', modu
     'CategoryLinkName',
     () => {
     	return (
-    		<div>
+    		<div style={{ fontFamily: 'spinnler, sans-serif, fresh'}}>
     			<label> you can change category link name</label><br />
     			<CategoryLinkName>Featured</CategoryLinkName>
     		</div>

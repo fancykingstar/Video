@@ -9,7 +9,7 @@ storiesOf('Pages|Featured/SearchBar', module)
     'SearchBar',
     () => {
     	return (
-    		<div>
+    		<div style={{ fontFamily: 'spinnler, sans-serif, fresh'}}>
     			<label>SearchBar</label><br /><br />
     			<SearchWrapper>
             <Input placeholder="Try 'Brett Favre' or 'Real Housewives" />

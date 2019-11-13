@@ -9,7 +9,7 @@ storiesOf('Pages|Featured/CategoryContainer/CategoryItem', module)
     'Default CategoryItem',
     () => {
     	return (
-    		<div>
+    		<div style={{ fontFamily: 'spinnler, sans-serif, fresh'}}>
     			<label> default category item</label><br />
     			<CategoryItem name="Featured" amount="300" />
     		</div>

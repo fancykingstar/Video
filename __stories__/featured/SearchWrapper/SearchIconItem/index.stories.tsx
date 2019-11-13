@@ -9,7 +9,7 @@ storiesOf('Pages|Featured/SearchBar/SearchIcon', module)
     'Default Search Icon',
     () => {
     	return (
-    		<div>
+    		<div style={{ fontFamily: 'spinnler, sans-serif, fresh'}}>
     			<label>Default Search Icon</label><br /><br />
           <SearchIconItem fontSize="" />
     		</div>
@@ -21,7 +21,7 @@ storiesOf('Pages|Featured/SearchBar/SearchIcon', module)
     'Large Search Icon',
     () => {
       return (
-        <div>
+        <div style={{ fontFamily: 'spinnler, sans-serif, fresh'}}>
           <label>Large Search Icon</label><br /><br />
           <SearchIconItem fontSize="Large" />
         </div>
@@ -33,7 +33,7 @@ storiesOf('Pages|Featured/SearchBar/SearchIcon', module)
     'Small Search Icon',
     () => {
       return (
-        <div>
+        <div style={{ fontFamily: 'spinnler, sans-serif, fresh'}}>
           <label>Small Search Icon</label><br /><br />
           <SearchIconItem fontSize="Small" />
         </div>
