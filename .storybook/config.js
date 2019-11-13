@@ -1,4 +1,5 @@
 import { addParameters, configure } from '@storybook/react';
+import { addDecorator } from '@storybook/react';
 
 // Option defaults:
 addParameters({
