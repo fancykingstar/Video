@@ -1,11 +1,7 @@
 import React from 'react';
 import styled from 'styled-components'
 import { storiesOf  } from '@storybook/react';
-import { 
-  UserCatItem,
-  ResultsGrid,
-  UserCategoryList
-} from '../../../pages/tjlavin';
+
 
 const categories = [
   "TV Hosts",
@@ -50,3 +46,23 @@ storiesOf('Pages|tjlavin/UserCategoryList', module)
     // If you want to set the options for a specific story
     { options: { panelPosition: 'right' } }
   )
+
+const UserCategoryList = styled.div`
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 24px;
+`
+
+const UserCatItem = styled.a`
+    padding: 9px 18px;
+    margin: 0 12px 7px 0;
+    border-radius: 30px;
+    display: inline-block;
+    background-color: #f7f7f7;
+    color: #4d4d4d;
+    text-decoration; none;
+    font-size: 18px;
+    &:hover {
+      background-color: #ececec;
+    }
+`
