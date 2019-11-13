@@ -18,7 +18,6 @@ storiesOf('Pages|Book', module)
                   <HeaderTitle>Brian Baumgartner</HeaderTitle>
               </Header>
           </HeaderRow>
-
           <BodyContainer>
               <BodyRow>
                   <LeftCol>
