@@ -107,9 +107,9 @@ storiesOf('Pages|Order', module)
                                     Booked By
                                 </SubTitle>
                                 <DescTxt>Liam</DescTxt>
-                                <OrderStatus>
+                                <SubTitle>
                                     Instructions
-                                </OrderStatus>
+                                </SubTitle>
                                 <DescTxt>
                                     My friend Nirav just moved home after a long time from home, and I'd love you to give him a big welcome
                                     home message :)
