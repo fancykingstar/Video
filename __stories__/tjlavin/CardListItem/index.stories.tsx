@@ -28,9 +28,9 @@ storiesOf('Pages|tjlavin/CardListItem', module)
     'Item',
     () => {
       return (
-        <>
+        <div style={{display: 'flex'}}>
           <CardListItem text={mockup[0].text} title={mockup[0].title} detail={mockup[0].detail} src={mockup[0].src} />
-        </>
+        </div>
       )
     },
     // If you want to set the options for a specific story
