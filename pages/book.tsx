@@ -103,11 +103,11 @@ const Body = () => (
     </BodyWrapper>
 );
 
-const HeaderRow = styled.div `
+export const HeaderRow = styled.div `
     
 `;
 
-const BodyWrapper = styled.div`
+export const BodyWrapper = styled.div`
   margin-top: 0;
   padding-top: 70px;
   -webkit-font-smoothing: antialiased;
@@ -116,7 +116,7 @@ const BodyWrapper = styled.div`
     background: #ffffff;
 `;
 
-const BodyContainer = styled.div`
+export const BodyContainer = styled.div`
     @media (min-width: 1280px){
         max-width: 1170px;
     }
@@ -127,7 +127,7 @@ const BodyContainer = styled.div`
     }
 `;
 
-const BodyRow = styled.div`
+export const BodyRow = styled.div`
     display: flex;
     color: #4d4d4d;
     padding-left: 16.67%;
@@ -146,7 +146,7 @@ const BodyRow = styled.div`
     }
 `;
 
-const Header = styled.div`
+export const Header = styled.div`
     background: #000000;
     position: absolute;
     width: 100%;
@@ -165,7 +165,7 @@ const Header = styled.div`
     }    
 `;
 
-const HeaderTitle = styled.span`
+export const HeaderTitle = styled.span`
     font-family: fresh;
     font-size: 175px;
     line-height: 1;
@@ -173,7 +173,7 @@ const HeaderTitle = styled.span`
     letter-spacing: -10px;
 `;
 
-const LeftCol = styled.div`    
+export const LeftCol = styled.div`    
     position: relative;
     background-color: #ffffff;
     height: 100%;
@@ -185,12 +185,12 @@ const LeftCol = styled.div`
     }
 `;
 
-const LeftColContainer = styled.div`
+export const LeftColContainer = styled.div`
     position: relative;
     padding-bottom: 15px;
 `; 
 
-const LeftColImage = styled.img`
+export const LeftColImage = styled.img`
     min-height: 0;
     max-height: 1200px;
     border-radius: 10px 0 10px 10px;
@@ -202,14 +202,14 @@ const LeftColImage = styled.img`
     }
 `;
 
-const VideoIcon = styled.img`
+export const VideoIcon = styled.img`
     position: absolute;
     bottom: 25px;
     left: 15px;
     cursor: pointer;
 `;
 
-const RightCol = styled.div`
+export const RightCol = styled.div`
     position: relative;
 
     @media (min-width: 768px) {
@@ -217,7 +217,7 @@ const RightCol = styled.div`
     }
 `;
 
-const RightColContainer = styled.div`
+export const RightColContainer = styled.div`
     background-color: #ffffff;
     height: 100%;
     border-radius: 0 10px 10px 0;
@@ -228,25 +228,25 @@ const RightColContainer = styled.div`
     }
 `;
 
-const RightColContainerTitle = styled.p`
+export const RightColContainerTitle = styled.p`
     font-size: 48px;
     line-height: 48px;
     padding-top: 20px;
     padding-bottom: 24px;
 `;
 
-const RightColContainerTitleStrong = styled.strong`
+export const RightColContainerTitleStrong = styled.strong`
     letter-spacing: 1.1px;
     margin-left: 12px;
 `;
 
-const Heart = styled.span`
+export const Heart = styled.span`
     font-size: 26px;
     vertical-align: middle;
     white-space: nowrap;
 `;
 
-const HeartImage = styled(HeartIcon)`
+export const HeartImage = styled(HeartIcon)`
     color: #fa005c;
     font-size: 32px;
     margin-top: -10px;
@@ -254,7 +254,7 @@ const HeartImage = styled(HeartIcon)`
     margin-right: 8px;
 `;
 
-const DemoComment = styled.p`
+export const DemoComment = styled.p`
     font-size: 30px;
     font-style: italic;
     line-height: 1.5em;
@@ -265,25 +265,25 @@ const DemoComment = styled.p`
     margin-bottom: 30px;
 `;
 
-const ButtonGroup = styled.div`
+export const ButtonGroup = styled.div`
     margin-bottom: 24px;
 `;
 
-const ConfirmationTalentLink = styled.div`
+export const ConfirmationTalentLink = styled.div`
     border-top: 1px solid #eee;
     padding-top: 24px;
     padding-bottom: 48px;
 `;
 
-const ConfirmationContainer = styled.div`
+export const ConfirmationContainer = styled.div`
     display: flex;
     flex-wrap: wrap;
 `;
 
-const ConfirmationImageLink = styled.a`
+export const ConfirmationImageLink = styled.a`
 `;
 
-const ConfirmationImage = styled.img`
+export const ConfirmationImage = styled.img`
     border-radius: 50%;
     width: 120px;
     height: 120px;
@@ -291,11 +291,11 @@ const ConfirmationImage = styled.img`
     vertical-align: top;
 `;
 
-const ConfirmationInformation = styled.div`
+export const ConfirmationInformation = styled.div`
     padding-top: 10px;
 `;
 
-const NameLink = styled.a`
+export const NameLink = styled.a`
     margin-bottom: 6px;
     margin-top: 15px;
     color: #000;
@@ -309,7 +309,7 @@ const NameLink = styled.a`
     }
 `;
 
-const Office = styled.p`
+export const Office = styled.p`
     color: #999;
     margin-bottom: 3px;
     margin-top: 6px;
