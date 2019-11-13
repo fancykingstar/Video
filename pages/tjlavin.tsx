@@ -15,33 +15,6 @@ const Index = () => (
   </>
 );
 
-const rCards = [
-    {
-        price: "$25",
-        src: "tjlavin_bottom.png",
-        smallTitle: "MTV - The Challenge",
-        title: "Zach Nichols"
-    },
-    {
-        price: "$25",
-        src: "tjlavin_bottom.png",
-        smallTitle: "MTV - The Challenge",
-        title: "Zach Nichols"
-    },
-    {
-        price: "$25",
-        src: "tjlavin_bottom.png",
-        smallTitle: "MTV - The Challenge",
-        title: "Zach Nichols"
-    },
-    {
-        price: "$25",
-        src: "tjlavin_bottom.png",
-        smallTitle: "MTV - The Challenge",
-        title: "Zach Nichols"
-    }
-];
-
 export default Index;
 
 const categories = [
