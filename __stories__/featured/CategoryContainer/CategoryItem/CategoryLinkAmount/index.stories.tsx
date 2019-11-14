@@ -1,6 +1,6 @@
 import React from 'react';
 import { storiesOf  } from '@storybook/react';
-import { CategoryLinkAmount } from '../../../../../pages/featured.tsx';
+import { CategoryLinkAmount } from 'pages/featured.tsx';
 
 storiesOf('Pages|Featured/CategoryContainer/CategoryItem/CategoryLinkAmount', module)
   // If you want to set the option for all stories in of this kind

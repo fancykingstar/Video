@@ -1,7 +1,7 @@
 import React from 'react';
 import { storiesOf  } from '@storybook/react';
 import styled from 'styled-components';
-import { RecommendedWrapper, RecommendedContainer, Select } from '../../../pages/featured.tsx';
+import { RecommendedWrapper, RecommendedContainer, Select } from 'pages/featured.tsx';
 
 storiesOf('Pages|Featured/RecommendedWrapper', module)
   // If you want to set the option for all stories in of this kind

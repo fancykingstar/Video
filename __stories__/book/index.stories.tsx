@@ -2,8 +2,8 @@ import React from 'react';
 import { storiesOf  } from '@storybook/react';
 import styled from 'styled-components'
 import HeartIcon from "@material-ui/icons/FavoriteBorder";
-import { CustomImageButton } from '../../components/ImageButton/CustomImageButton.tsx';
-import { CustomButton } from '../../components/Button/CustomButton.tsx';
+import { CustomImageButton } from 'components/ImageButton/CustomImageButton.tsx';
+import { CustomButton } from 'components/Button/CustomButton.tsx';
 
 storiesOf('Pages|Book', module)
   // If you want to set the option for all stories in of this kind

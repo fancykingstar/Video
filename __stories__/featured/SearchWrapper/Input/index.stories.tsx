@@ -1,6 +1,6 @@
 import React from 'react';
 import { storiesOf  } from '@storybook/react';
-import { Input } from '../../../../pages/featured.tsx';
+import { Input } from 'pages/featured.tsx';
 
 storiesOf('Pages|Featured/SearchBar/Input', module)
   // If you want to set the option for all stories in of this kind

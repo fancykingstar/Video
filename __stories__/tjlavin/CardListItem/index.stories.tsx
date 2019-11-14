@@ -3,8 +3,8 @@ import styled from 'styled-components'
 import { storiesOf  } from '@storybook/react';
 import { 
   CardListItem,
-} from '../../../components/CardListItem/CardListItem';
-import { ResultsGrid, BodyRow, ResultsContainer, BodyContainer, BodyWrapper } from '../../../pages/tjlavin';
+} from 'components/CardListItem/CardListItem';
+import { ResultsGrid, BodyRow, ResultsContainer, BodyContainer, BodyWrapper } from 'pages/tjlavin';
 
 const mockup = [{
     text: "A",

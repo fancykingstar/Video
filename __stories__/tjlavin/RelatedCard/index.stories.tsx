@@ -1,8 +1,8 @@
 import React from 'react';
 import styled from 'styled-components'
 import { storiesOf  } from '@storybook/react';
-import { RelatedCard } from '../../../components/RelatedCard/RelatedCard.tsx';
-import { ResultsGrid } from '../../../pages/tjlavin';
+import { RelatedCard } from 'components/RelatedCard/RelatedCard.tsx';
+import { ResultsGrid } from 'pages/tjlavin';
 
 const card =
   {

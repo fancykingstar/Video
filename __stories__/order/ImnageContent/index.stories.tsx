@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components'
 import { storiesOf  } from '@storybook/react';
-import { ImageContent } from '../../../components/ImageContent/ImageContent.tsx';
+import { ImageContent } from 'components/ImageContent/ImageContent.tsx';
 
 const TalentLink = styled.a`
     color: #337ab7;

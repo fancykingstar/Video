@@ -1,6 +1,6 @@
 import React from 'react';
 import { storiesOf  } from '@storybook/react';
-import { FormInput } from '../../components/FormInput/FormInput.tsx';
+import { FormInput } from 'components/FormInput/FormInput.tsx';
 
 const options = [
     { text: "Your name", placeholder: "Michael Jordan" },

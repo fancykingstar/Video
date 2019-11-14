@@ -1,7 +1,7 @@
 import React from 'react';
 import { storiesOf  } from '@storybook/react';
 import styled from 'styled-components';
-import { Image } from '../../../../pages/featured.tsx';
+import { Image } from 'pages/featured.tsx';
 
 const result = [{
   name: "Gilbert",

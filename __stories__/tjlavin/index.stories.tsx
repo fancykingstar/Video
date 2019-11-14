@@ -3,7 +3,7 @@ import { storiesOf  } from '@storybook/react';
 import StarIcon from "@material-ui/icons/Star";
 import BoltIcon from "@material-ui/icons/OfflineBoltSharp";
 
-import { CardListItem } from "../../components/CardListItem/CardListItem";
+import { CardListItem } from "components/CardListItem/CardListItem";
 
 const categories = [
   "TV Hosts",

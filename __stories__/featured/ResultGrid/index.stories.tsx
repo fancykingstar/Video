@@ -1,8 +1,8 @@
 import React from 'react';
 import { storiesOf  } from '@storybook/react';
 import styled from 'styled-components';
-import { ResultsGrid, Image } from '../../../pages/featured.tsx';
-import { results } from '../../../utils/data';
+import { ResultsGrid, Image } from 'pages/featured.tsx';
+import { results } from 'utils/data';
 
 storiesOf('Pages|Featured/ResultsGrid', module)
   // If you want to set the option for all stories in of this kind

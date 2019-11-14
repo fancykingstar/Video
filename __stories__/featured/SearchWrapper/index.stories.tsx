@@ -1,6 +1,6 @@
 import React from 'react';
 import { storiesOf  } from '@storybook/react';
-import { SearchWrapper, Input, SearchIconContainer, SearchIconItem } from '../../../pages/featured.tsx';
+import { SearchWrapper, Input, SearchIconContainer, SearchIconItem } from 'pages/featured.tsx';
 
 storiesOf('Pages|Featured/SearchBar', module)
   // If you want to set the option for all stories in of this kind

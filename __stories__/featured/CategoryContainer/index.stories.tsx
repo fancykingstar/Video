@@ -1,7 +1,7 @@
 import React from 'react';
 import { storiesOf  } from '@storybook/react';
 import styled from 'styled-components';
-import { CategoryItem, CategoryContainer, CategoryTitle, Sepatator } from '../../../pages/featured.tsx';
+import { CategoryItem, CategoryContainer, CategoryTitle, Sepatator } from 'pages/featured.tsx';
 
 const categories = [
   { name: "Featured", amount: 300 },

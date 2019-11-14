@@ -1,6 +1,6 @@
 import React from 'react';
 import { storiesOf  } from '@storybook/react';
-import { CustomButton } from '../../../components/Button/CustomButton.tsx';
+import { CustomButton } from 'components/Button/CustomButton';
 
 storiesOf('Pages|Book/CustomButton', module)
   // If you want to set the option for all stories in of this kind

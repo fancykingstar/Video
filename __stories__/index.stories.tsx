@@ -1,7 +1,7 @@
 import React from 'react';
 import { storiesOf  } from '@storybook/react';
 import styled from 'styled-components';
-import { FormInput } from '../components/FormInput/FormInput.tsx';
+import { FormInput } from 'components/FormInput/FormInput.tsx';
 
 const options = [
     { key: "twitter", value: "Twitter" },

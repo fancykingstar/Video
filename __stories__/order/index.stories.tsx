@@ -3,7 +3,7 @@ import { storiesOf  } from '@storybook/react';
 
 import CheckIcon from "@material-ui/icons/Check";
 
-import {RelatedCard} from "../components/RelatedCard/RelatedCard";
+import {RelatedCard} from "components/RelatedCard/RelatedCard";
 
 const rCards = [
     {

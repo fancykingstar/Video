@@ -1,7 +1,7 @@
 import React from 'react';
 import { storiesOf  } from '@storybook/react';
 import styled from 'styled-components';
-import { results, categories } from '../../utils/data';
+import { results, categories } from 'utils/data';
 
 import { 
   BodyWrapper,
